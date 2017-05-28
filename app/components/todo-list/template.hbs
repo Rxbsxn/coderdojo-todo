@@ -1,1 +1,10 @@
+<h1>Todolist</h1>
+{{input value=newTodoText enter=(action 'addTodo')}}
+<ul>
+	{{#each todosSorted as |td|}}
+  	{{todo-item todo=td}}
+    {{else}}
+    	<p>Nothing to do</p>
+    {{/each}}
+</ul>
 {{yield}}
